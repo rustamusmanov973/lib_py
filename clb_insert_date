@@ -1,0 +1,7 @@
+#!/Users/rst/miniconda/envs/py37/bin/python
+from richxerox import copy
+import pyautogui
+import datetime
+today = datetime.datetime.today()
+copy(today.strftime("%Y-%m-%d-%H.%M.%S"))
+pyautogui.hotkey('command', 'v')

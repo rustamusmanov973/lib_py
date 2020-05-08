@@ -1,0 +1,14 @@
+#!/Users/rst/miniconda/bin/python
+from richxerox import copy, paste
+from pyautogui import hotkey
+import osascript
+clb1 = paste()
+hotkey('command', 'c')
+clb2 = paste()
+print(    f'clb1: {clb1} clb2: {clb2} ' )
+if clb1 != clb2:
+    query = clb2.lower().replace(" ", "+")
+    import os
+    os.system(f"open 'https://alesia.store/da.php?query={query}'")
+else:
+    osascript.run(f"tell application \"Alfred 4\" to search \"da \" ", background=False)

@@ -1,0 +1,9 @@
+#!/Users/rst/miniconda/bin/python
+from time import sleep
+from richxerox import copy, paste
+from pyautogui import hotkey
+import osascript
+hotkey('command', 'c')
+osascript.run("tell application \"Alfred 4\" to search \"trans \" ", background=False)
+sleep(2.0)
+hotkey('command', 'v')
